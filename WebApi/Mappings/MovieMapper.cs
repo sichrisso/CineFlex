@@ -1,5 +1,5 @@
-using Application.Dtos;
-using Application.Features.Command;
+using Application.Features.MovieFeat.CQRS.Commands;
+using Application.Features.MovieFeat.DTOs;
 using Riok.Mapperly.Abstractions;
 
 namespace WebApi.Mappings;

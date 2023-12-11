@@ -1,6 +1,7 @@
+using Application.Features.MovieFeat.CQRS.Commands;
 using FluentValidation;
 
-namespace Application.Features.Command;
+namespace Application.Features.MovieFeat.DTOs.Validators;
 
 public class CreateMovieCommandValidator : AbstractValidator<CreateMovieCommand>
 {

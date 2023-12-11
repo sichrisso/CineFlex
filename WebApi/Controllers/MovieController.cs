@@ -1,5 +1,5 @@
-using Application.Dtos;
-using Application.Features.Query;
+using Application.Features.MovieFeat.CQRS.Queries;
+using Application.Features.MovieFeat.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Mappings;

@@ -1,8 +1,8 @@
-using Application.Dtos;
-using Domain.Entites;
+using Application.Features.MovieFeat.DTOs;
+using Domain.Entities;
 using Riok.Mapperly.Abstractions;
 
-namespace Application.Mappings;
+namespace Application.Profiles.Mappings;
 
 [Mapper(EnumMappingStrategy = EnumMappingStrategy.ByName)]
 public static partial class MovieMapper

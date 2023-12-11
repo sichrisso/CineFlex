@@ -1,7 +1,8 @@
-using Application.Dtos;
 using MediatR;
 using ErrorOr;
+using Application.Features.MovieFeat.DTOs;
 
-namespace Application.Features.Command;
+
+namespace Application.Features.MovieFeat.CQRS.Commands;
 
 public record UpdateMovieCommand(UpdateMovieDto UpdateMovieDto) : IRequest<ErrorOr<MovieDto>>;

@@ -1,12 +1,13 @@
 using Application.Common;
-using Application.Dtos;
-using Application.Mappings;
 using MediatR;
 using ErrorOr;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using Application.Profiles.Mappings;
+using Application.Features.MovieFeat.CQRS.Queries;
+using Application.Features.MovieFeat.DTOs;
 
-namespace Application.Features.Query.Handlers;
+namespace Application.Features.MovieFeat.CQRS.Handlers;
 
 public class GetAllMoviesQueryHandler : IRequestHandler<GetAllMoviesQuery, ErrorOr<PaginatedList<MovieDto>>>
 {
@@ -31,3 +32,6 @@ public class GetAllMoviesQueryHandler : IRequestHandler<GetAllMoviesQuery, Error
         return new PaginatedList<MovieDto>(moviesDto, count, pageNumber, pageSize);
     }
 }
+
+
+

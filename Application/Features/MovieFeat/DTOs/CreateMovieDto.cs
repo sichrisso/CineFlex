@@ -1,4 +1,4 @@
-namespace Application.Dtos;
+namespace Application.Features.MovieFeat.DTOs;
 
 public record CreateMovieDto(
     string Title,

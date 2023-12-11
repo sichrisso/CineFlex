@@ -1,11 +1,12 @@
-using Application.Dtos;
-using Application.Mappings;
-using Domain.Entites;
 using MediatR;
 using ErrorOr;
 using Persistence;
+using Application.Profiles.Mappings;
+using Domain.Entities;
+using Application.Features.MovieFeat.CQRS.Commands;
+using Application.Features.MovieFeat.DTOs;
 
-namespace Application.Features.Command.Handlers;
+namespace Application.Features.MovieFeat.CQRS.Handlers;
 
 public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, ErrorOr<MovieDto>>
 {
@@ -19,14 +20,14 @@ public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, Err
     public async Task<ErrorOr<MovieDto>> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
     {
         var (title, genre, releaseYear) = request.CreateMovieDto;
-        
+
         var movie = new Movie
         {
             Title = title,
             Genre = genre,
             ReleaseYear = releaseYear
         };
-        
+
         var result = await _dbContext.Movies.AddAsync(movie, cancellationToken);
         await _dbContext.SaveChangesAsync(cancellationToken);
 

@@ -1,11 +1,12 @@
-using Application.Dtos;
-using Application.Mappings;
 using MediatR;
 using ErrorOr;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using Application.Profiles.Mappings;
+using Application.Features.MovieFeat.DTOs;
+using Application.Features.MovieFeat.CQRS.Commands;
 
-namespace Application.Features.Command.Handlers;
+namespace Application.Features.MovieFeat.CQRS.Handlers;
 
 public class UpdateMovieCommandHandler : IRequestHandler<UpdateMovieCommand, ErrorOr<MovieDto>>
 {

@@ -1,9 +1,9 @@
 using Application.Common;
-using Application.Dtos;
 using MediatR;
 using ErrorOr;
+using Application.Features.MovieFeat.DTOs;
 
-namespace Application.Features.Query;
+namespace Application.Features.MovieFeat.CQRS.Queries;
 
 public record GetAllMoviesQuery (
     int PageNumber, 
